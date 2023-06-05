@@ -39,16 +39,16 @@
 
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
-			<div class="small-box bg-yellow">
+			<div class="small-box" style="border-radius:10px; background-color: #C4B0FF;">
 				<div class="inner">
 					<h4>
 						<?= $siswa; ?>
 					</h4>
 
-					<p>Siswa Aktif</p>
+					<h4>Siswa</h4>
 				</div>
 				<div class="icon">
-					<i class="ion ion-person-add"></i>
+					<i class="fa fa-users"></i>
 				</div>
 				<a href="?page=petugas" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
@@ -59,16 +59,16 @@
 
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
-			<div class="small-box bg-aqua">
+			<div class="small-box" style="border-radius:10px; background-color: #C4B0FF;">
 				<div class="inner">
 					<h4>
 						<?= rupiah($setor); ?>
 					</h4>
 
-					<p>Total Setoran</p>
+					<h4>Total Setoran</h4>
 				</div>
 				<div class="icon">
-					<i class="ion ion-bag"></i>
+					<i class="fa fa-arrow-circle-o-down"></i>
 				</div>
 				<a href="?page=data_setor" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
@@ -79,15 +79,15 @@
 
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
-			<div class="small-box bg-red">
+			<div class="small-box" style="border-radius:10px; background-color: #C4B0FF;">
 				<div class="inner">
 					<h4>
 						<?= rupiah($tarik); ?>
 					</h4>
-					<p>Total Penarikan</p>
+					<h4>Total Penarikan</h4>
 				</div>
 				<div class="icon">
-					<i class="ion ion-stats-bars"></i>
+					<i class="fa fa-arrow-circle-o-up"></i>
 				</div>
 				<a href="?page=data_tarik" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
@@ -98,18 +98,18 @@
 
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
-			<div class="small-box bg-green">
+			<div class="small-box" style="border-radius:10px; background-color: #C4B0FF;">
 				<div class="inner">
 					<h4>
 						<?= rupiah($saldo); ?>
 					</h4>
-					<p>Total Saldo</p>
+					<h4>Total Saldo</h4>
 				</div>
 				<div class="icon">
-					<i class="ion ion-pie-graph"></i>
+					<i class="fa fa-pie-chart"></i>
 				</div>
-				<a href="#" class="small-box-footer">More info
-					<i class="fa fa-arrow-circle-right"></i>
+				<a href="#" class="small-box-footer">
+					<i class="fa fa-book"></i>
 				</a>
 			</div>
 		</div>
@@ -122,7 +122,7 @@
 		<div class="row">
 			<div class="box box-primary">
 				<div class="box-header">
-					<strong>Profil Sekolah</strong>
+					<h3><strong>Profil Sekolah</strong></h3>
 					<div class="box-tools pull-right">
 						<button type="button" class="btn btn-box-tool" data-widget="collapse">
 							<i class="fa fa-minus"></i>
@@ -138,9 +138,9 @@
 						<table class="table table-bordered table-striped">
 							<thead>
 								<tr>
-									<th>Nama Sekolah</th>
-									<th>Alamat</th>
-									<th>Akreditasi</th>
+									<th><h4><b>Nama Sekolah</b></h4></th>
+									<th><h4><b>Alamat</b></h4></th>
+									<th><h4><b>Akreditasi</b></h4></th>
 								</tr>
 							</thead>
 							<tbody>

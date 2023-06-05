@@ -52,7 +52,7 @@ include "inc/koneksi.php";
 					</div>
 					<!-- /.col -->
 					<div class="col-xs-4">
-						<button type="submit" class="btn btn-primary btn-block btn-flat" name="btnLogin" title="Masuk Sistem" style="border-radius:10px;">
+						<button type="submit" class="btn btn-primary btn-succes btn-block btn-flat" name="btnLogin" title="Masuk Sistem">
 							<b>Login</b>
 						</button>
 					</div>
@@ -73,13 +73,13 @@ include "inc/koneksi.php";
 	<!-- iCheck -->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	<!-- sweet alert -->
-	<body class="hold-transition login-page" style="background:url(dist/img/background_login.jpg)
+	<body class="hold-transition login-page" style="background:url(dist/img/bg_login.png)
 no-repeat center center fixed; background-size: cover;
  -webkit-background-size: cover; 
  -moz-background-size: cover; -o-background-size: cover;">
 </body>
 <footer style="text-align: center;">
-	<strong style="color:white;">&copy; 2023 Dikembangkan Oleh<a> ICT POMOSDA</a></strong>
+	<strong style="color:black;">&copy; 2023 Dikembangkan Oleh<a style="color:black;"> ICT POMOSDA</a></strong>
 </footer>
 
 </html>

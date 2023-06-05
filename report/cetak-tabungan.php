@@ -21,7 +21,7 @@
 		<h2>Tabungan Siswa</h2>
 		<h3>SD POMOSDA</h3>
 		<p>Jl. Wachid Hasyim No.305, Tanjung, Tanjunganom, Kec. Tanjunganom<br>Kabupaten Nganjuk, Jawa Timur 64482</p>
-		<p>Rajin Pangkal Pandai. Hemat Pangkal Kaya.</p>
+		<p>Sudahi jajanmu. Mari nabung civic bersamakuuuu &#128540;</p>
 		<p>___________________________________________________________________</p>
 
 		<tbody>

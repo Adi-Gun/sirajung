@@ -52,22 +52,22 @@
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
-<body class="hold-transition skin-red sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini">
 	<!-- Site wrapper -->
 	<div class="wrapper">
 
 		<header class="main-header">
 			<!-- Logo -->
-			<a href="index.php" class="logo">
+			<a href="index.php" class="logo" style="background-color: #4942E4">
 				<span class="logo-lg">
 					<!-- <img src="dist/img/logo_sirajung.png" width="45px"> -->
 					<b>SIRAJUNG</b>
 				</span>
 			</a>
 			<!-- Header Navbar: style can be found in header.less -->
-			<nav class="navbar navbar-static-top">
+			<nav class="navbar navbar-static-top" style="background-color: #4942E4;">
 				<!-- Sidebar toggle button-->
-				<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+				<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" style="background-color: #4942E4">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -107,7 +107,7 @@
 						<p>
 							<?php echo $data_nama; ?>
 						</p>
-						<span class="label label-success">
+						<span class="label" style="background-color: #4942E4;">
 							<?php echo $data_level; ?>
 						</span>
 					</div>

@@ -39,11 +39,11 @@
 
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
-			<div class="small-box" style="border-radius:10px; background-color: #F9E0BB;">
+			<div class="small-box" style="border-radius:10px; background-color: #C4B0FF;">
 				<div class="inner">
-					<h2>
+					<h4>
 						<?= $siswa; ?>
-					</h2>
+					</h4>
 
 					<h4>Siswa</h4>
 				</div>
@@ -59,11 +59,11 @@
 
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
-			<div class="small-box" style="border-radius:10px; background-color: #FFC26F;">
+			<div class="small-box" style="border-radius:10px; background-color: #C4B0FF;">
 				<div class="inner">
-					<h2>
+					<h4>
 						<?= rupiah($setor); ?>
-					</h2>
+					</h4>
 
 					<h4>Total Setoran</h4>
 				</div>
@@ -79,11 +79,11 @@
 
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
-			<div class="small-box" style="border-radius:10px; background-color: #C38154;">
+			<div class="small-box" style="border-radius:10px; background-color: #C4B0FF;">
 				<div class="inner">
-					<h2>
+					<h4>
 						<?= rupiah($tarik); ?>
-					</h2>
+					</h4>
 					<h4>Total Penarikan</h4>
 				</div>
 				<div class="icon">
@@ -98,15 +98,15 @@
 
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
-			<div class="small-box" style="border-radius:10px; background-color: #00A65A;">
+			<div class="small-box" style="border-radius:10px; background-color: #C4B0FF;">
 				<div class="inner">
-					<h2>
+					<h4>
 						<?= rupiah($saldo); ?>
-					</h2>
+					</h4>
 					<h4>Total Saldo</h4>
 				</div>
 				<div class="icon">
-					<i class="ion ion-pie-graph"></i>
+					<i class="fa fa-pie-chart"></i>
 				</div>
 				<a href="" class="small-box-footer">
 					<i class="fa fa-book"></i>
