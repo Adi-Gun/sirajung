@@ -173,7 +173,7 @@
 							</li>
 							<li>
 								<a href="?page=view_kas">
-									<i class="fa  fa-pie-chart"></i>Info Kas</a>
+									<i class="fa  fa-pie-chart"></i>Info Tabungan</a>
 							</li>
 						</ul>
 					</li>
@@ -438,8 +438,7 @@
 		<footer class="main-footer">
 			<div class="pull-right hidden-xs">
 			</div>
-			<strong>&copy; 2023 Dikembangkan Oleh
-				<a >ICT POMOSDA</a></strong>
+			<strong style="color:black;">&copy; 2023 Dikembangkan Oleh<a style="color:blue;" href="https://stt-pomosda.ac.id/" target="_blank"> STT POMOSDA</a></strong>
 		</footer>
 		<div class="control-sidebar-bg"></div>
 

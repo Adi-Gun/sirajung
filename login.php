@@ -79,7 +79,7 @@ no-repeat center center fixed; background-size: cover;
  -moz-background-size: cover; -o-background-size: cover;">
 </body>
 <footer style="text-align: center;">
-	<strong style="color:black;">&copy; 2023 Dikembangkan Oleh<a style="color:black;"> ICT POMOSDA</a></strong>
+	<strong style="color:black;">&copy; 2023 Dikembangkan Oleh<a style="color:black;" href="https://stt-pomosda.ac.id/" target="_blank"> STT POMOSDA</a></strong>
 </footer>
 
 </html>
