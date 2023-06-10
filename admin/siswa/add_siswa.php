@@ -72,6 +72,25 @@
 						</div>
 
 						<div class="form-group">
+							<label>Angkatan</label>
+							<select name="id_angkatan" id="id_angkatan" class="form-control" required>
+								<option value="">-- Pilih --</option>
+								<?php
+								// ambil data dari database
+								$query = "select * from tb_angkatan";
+								$hasil = mysqli_query($koneksi, $query);
+								while ($row = mysqli_fetch_array($hasil)) {
+								?>
+								<option value="<?php echo $row['id_angkatan'] ?>">
+									<?php echo $row['angkatan'] ?>
+								</option>
+								<?php
+                  }
+                  ?>
+							</select>
+						</div>
+
+						<div class="form-group">
 							<label>Tahun Masuk</label>
 							<input type="number" name="th_masuk" id="th_masuk" class="form-control" placeholder="Th Masuk">
 						</div>
@@ -92,11 +111,12 @@
 
     if (isset ($_POST['Simpan'])){
     
-        $sql_simpan = "INSERT INTO tb_siswa (nis,nama_siswa,jekel,id_kelas,status,th_masuk) VALUES (
+        $sql_simpan = "INSERT INTO tb_siswa (nis,nama_siswa,jekel,id_kelas,id_angkatan,status,th_masuk) VALUES (
            '".$_POST['nis']."',
           '".$_POST['nama_siswa']."',
           '".$_POST['jekel']."',
           '".$_POST['id_kelas']."',
+          '".$_POST['id_angkatan']."',
           'Aktif',
           '".$_POST['th_masuk']."')";
         $query_simpan = mysqli_query($koneksi, $sql_simpan);

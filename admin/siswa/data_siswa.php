@@ -38,6 +38,7 @@
 							<th>Nama</th>
 							<th>JK</th>
 							<th>Kelas</th>
+							<th>Angkatan</th>
 							<th>Status</th>
 							<th>Th Masuk</th>
 							<th>Aksi</th>
@@ -47,10 +48,10 @@
 
 						<?php
                   $no = 1;
-                  $sql = $koneksi->query("SELECT s.nis, s.nama_siswa, s.jekel, s.status, s.th_masuk, k.kelas 
-                  from tb_siswa s inner join tb_kelas k on s.id_kelas=k.id_kelas 
+                  $sql = $koneksi->query("SELECT s.nis, s.nama_siswa, s.jekel, s.status, s.th_masuk, k.kelas, a.angkatan 
+                  from tb_siswa s inner join tb_kelas k on s.id_kelas=k.id_kelas inner join tb_angkatan a on s.id_angkatan=a.id_angkatan
                   order by kelas asc, nis asc");
-                  while ($data= $sql->fetch_assoc()) {
+                  WHILE ($data= $sql->fetch_assoc()) {
                 ?>
 
 						<tr>
@@ -68,6 +69,9 @@
 							</td>
 							<td>
 								<?php echo $data['kelas']; ?>
+							</td>
+							<td>
+								<?php echo $data['angkatan']; ?>
 							</td>
 
 							<?php $warna = $data['status']  ?>
@@ -93,7 +97,7 @@
 								<a href="?page=MyApp/del_siswa&kode=<?php echo $data['nis']; ?>" onclick="return confirm('Yakin Hapus Data Ini ?')"
 								 title="Hapus" class="btn btn-danger">
 									<i class="glyphicon glyphicon-trash"></i>
-									</>
+									</a>
 							</td>
 						</tr>
 						<?php

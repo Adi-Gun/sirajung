@@ -1,7 +1,7 @@
 <section class="content-header">
 	<h1>
 		Master Data
-		<small>Kelas</small>
+		<small>Angkatan</small>
 	</h1>
 	<ol class="breadcrumb">
 		<li>
@@ -16,7 +16,7 @@
 <section class="content">
 	<div class="box box-primary">
 		<div class="box-header with-border">
-			<a href="?page=MyApp/add_kelas" title="Tambah Data" class="btn btn-primary">
+			<a href="?page=MyApp/add_angkatan" title="Tambah Data" class="btn btn-primary">
 				<i class="glyphicon glyphicon-plus"></i> Tambah Data</a>
 			<div class="box-tools pull-right">
 				<button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -34,7 +34,7 @@
 					<thead>
 						<tr>
 							<th>No</th>
-							<th>Kelas</th>
+							<th>Angkatan</th>
 							<th>Aksi</th>
 						</tr>
 					</thead>
@@ -42,7 +42,7 @@
 
 						<?php
                   $no = 1;
-                  $sql = $koneksi->query("SELECT * FROM tb_kelas");
+                  $sql = $koneksi->query("SELECT * FROM tb_angkatan");
                   while ($data= $sql->fetch_assoc()) {
                 ?>
 
@@ -51,14 +51,14 @@
 								<?php echo $no++; ?>
 							</td>
 							<td>
-								<?php echo $data['kelas']; ?>
+								<?php echo $data['angkatan']; ?>
 							</td>
 							<td>
-								<a href="?page=MyApp/edit_kelas&kode=<?php echo $data['id_kelas']; ?>" title="Ubah"
+								<a href="?page=MyApp/edit_angkatan&kode=<?php echo $data['id_angkatan']; ?>" title="Ubah"
 								 class="btn btn-success">
 									<i class="glyphicon glyphicon-edit"></i>
 								</a>
-								<a href="?page=MyApp/del_kelas&kode=<?php echo $data['id_kelas']; ?>" onclick="return confirm('Yakin Hapus Data Ini ?')"
+								<a href="?page=MyApp/del_angkatan&kode=<?php echo $data['id_angkatan']; ?>" onclick="return confirm('Yakin Hapus Data Ini ?')"
 								 title="Hapus" class="btn btn-danger">
 									<i class="glyphicon glyphicon-trash"></i>
 									</a>

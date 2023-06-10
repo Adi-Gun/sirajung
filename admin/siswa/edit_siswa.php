@@ -93,6 +93,28 @@
 						</div>
 
 						<div class="form-group">
+							<label>Angkatan</label>
+							<select name="id_angkatan" id="id_angkatan" class="form-control" required>
+								<option value="">-- Pilih --</option>
+								<?php
+                                    // ambil data dari database
+                                    $query = "select * from tb_angkatan";
+                                    $hasil = mysqli_query($koneksi, $query);
+                                    while ($row = mysqli_fetch_array($hasil)) {
+
+                                    //mengecek data yang dipilih sebelumnya
+                                    ?>
+								<option value="<?php echo $row['id_angkatan'] ?>" <?=$data_cek[
+								 'id_angkatan']==$row[ 'id_angkatan'] ? "selected" : null ?>>
+									<?php echo $row['angkatan'] ?>
+								</option>
+								<?php
+                            }
+                            ?>
+							</select>
+						</div>
+
+						<div class="form-group">
 							<label>Th Masuk</label>
 							<input class="form-control" name="th_masuk" value="<?php echo $data_cek['th_masuk']; ?>">
 						</div>

@@ -141,7 +141,6 @@
 							</span>
 						</a>
 						<ul class="treeview-menu">
-
 							<li>
 								<a href="?page=MyApp/data_siswa">
 									<i class="fa fa-users"></i>Siswa</a>
@@ -149,6 +148,10 @@
 							<li>
 								<a href="?page=MyApp/data_kelas">
 									<i class="fa fa-feed"></i>Kelas</a>
+							</li>
+							<li>
+								<a href="?page=MyApp/data_angkatan">
+									<i class="fa fa-feed"></i>Angkatan</a>
 							</li>
 						</ul>
 					</li>
@@ -173,7 +176,7 @@
 							</li>
 							<li>
 								<a href="?page=view_kas">
-									<i class="fa  fa-pie-chart"></i>Info Tabungan</a>
+									<i class="fa  fa-pie-chart"></i>Info Kas</a>
 							</li>
 						</ul>
 					</li>
@@ -340,6 +343,20 @@
                   break;
               case 'MyApp/del_kelas':
                   include "admin/kelas/del_kelas.php";
+                  break;
+
+               //Angkatan
+              case 'MyApp/data_angkatan':
+                  include "admin/angkatan/data_angkatan.php";
+                  break;
+              case 'MyApp/add_angkatan':
+                  include "admin/angkatan/add_angkatan.php";
+                  break;
+              case 'MyApp/edit_angkatan':
+                  include "admin/angkatan/edit_angkatan.php";
+                  break;
+              case 'MyApp/del_angkatan':
+                  include "admin/angkatan/del_angkatan.php";
                   break;
 
               //Siswa

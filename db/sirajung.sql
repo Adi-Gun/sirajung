@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Bulan Mei 2023 pada 17.48
+-- Waktu pembuatan: 10 Jun 2023 pada 06.18
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -18,8 +18,31 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tabsis`
+-- Database: `sirajung`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_angkatan`
+--
+
+CREATE TABLE `tb_angkatan` (
+  `id_angkatan` int(11) NOT NULL,
+  `angkatan` varchar(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_angkatan`
+--
+
+INSERT INTO `tb_angkatan` (`id_angkatan`, `angkatan`) VALUES
+(1, '1'),
+(2, '2'),
+(4, '3'),
+(5, '4'),
+(7, '5'),
+(8, '6');
 
 -- --------------------------------------------------------
 
@@ -63,8 +86,8 @@ CREATE TABLE `tb_pengguna` (
 --
 
 INSERT INTO `tb_pengguna` (`id_pengguna`, `nama_pengguna`, `username`, `password`, `level`) VALUES
-(1, 'administrator', 'admin', 'admin', 'Administrator'),
-(4, 'Petugas', 'admin2', 'admin2', 'Petugas');
+(1, 'Adi Gunawan Ahmad', 'admin', 'admin', 'Administrator'),
+(4, 'Eren Yeager', 'petugas', 'petugas', 'Petugas');
 
 -- --------------------------------------------------------
 
@@ -97,6 +120,7 @@ CREATE TABLE `tb_siswa` (
   `nama_siswa` varchar(40) NOT NULL,
   `jekel` enum('LK','PR') NOT NULL,
   `id_kelas` int(11) NOT NULL,
+  `id_angkatan` int(11) NOT NULL,
   `status` enum('Aktif','Lulus','Pindah') NOT NULL,
   `th_masuk` year(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -105,10 +129,9 @@ CREATE TABLE `tb_siswa` (
 -- Dumping data untuk tabel `tb_siswa`
 --
 
-INSERT INTO `tb_siswa` (`nis`, `nama_siswa`, `jekel`, `id_kelas`, `status`, `th_masuk`) VALUES
-('123', 'Adi Gunawan Ahmad', 'LK', 5, 'Aktif', 2022),
-('124', 'Eren Yeager', 'LK', 5, 'Aktif', 2022),
-('125', 'Rumbling', 'LK', 6, 'Aktif', 2022);
+INSERT INTO `tb_siswa` (`nis`, `nama_siswa`, `jekel`, `id_kelas`, `id_angkatan`, `status`, `th_masuk`) VALUES
+('100', 'Adi Gunawan Ahmad', 'LK', 10, 2, 'Aktif', 2000),
+('126', 'Erwin Smith', 'LK', 7, 8, 'Aktif', 2003);
 
 -- --------------------------------------------------------
 
@@ -127,18 +150,14 @@ CREATE TABLE `tb_tabungan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_tabungan`
---
-
-INSERT INTO `tb_tabungan` (`id_tabungan`, `nis`, `setor`, `tarik`, `tgl`, `jenis`, `petugas`) VALUES
-(66, '123', 1000000, 0, '2023-05-30', 'ST', 'administrator'),
-(67, '123', 0, 10000, '2023-05-30', 'TR', 'administrator'),
-(68, '124', 1000000, 0, '2023-05-30', 'ST', 'administrator'),
-(69, '125', 1000000, 0, '2023-05-30', 'ST', 'administrator');
-
---
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `tb_angkatan`
+--
+ALTER TABLE `tb_angkatan`
+  ADD PRIMARY KEY (`id_angkatan`);
 
 --
 -- Indeks untuk tabel `tb_kelas`
@@ -163,7 +182,8 @@ ALTER TABLE `tb_profil`
 --
 ALTER TABLE `tb_siswa`
   ADD PRIMARY KEY (`nis`),
-  ADD KEY `id_kelas` (`id_kelas`);
+  ADD KEY `id_kelas` (`id_kelas`),
+  ADD KEY `id_angkatan` (`id_angkatan`);
 
 --
 -- Indeks untuk tabel `tb_tabungan`
@@ -175,6 +195,12 @@ ALTER TABLE `tb_tabungan`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_angkatan`
+--
+ALTER TABLE `tb_angkatan`
+  MODIFY `id_angkatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_kelas`
@@ -198,7 +224,7 @@ ALTER TABLE `tb_profil`
 -- AUTO_INCREMENT untuk tabel `tb_tabungan`
 --
 ALTER TABLE `tb_tabungan`
-  MODIFY `id_tabungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id_tabungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

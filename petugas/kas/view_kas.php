@@ -49,7 +49,7 @@
 					<!-- /.box-body -->
 
 					<div class="box-footer">
-						<input type="submit" name="btnCetak" value="Cetak Periode" class="btn btn-info">
+						<input type="submit" name="btnCetak" value="Lihat" class="btn btn-info">
 					</div>
 				</form>
 			</div>
