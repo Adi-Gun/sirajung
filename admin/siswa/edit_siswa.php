@@ -158,6 +158,7 @@ if (isset ($_POST['Ubah'])){
         nama_siswa='".$_POST['nama_siswa']."',
         jekel='".$_POST['jekel']."',
         id_kelas='".$_POST['id_kelas']."',
+        id_angkatan='".$_POST['id_angkatan']."',
         th_masuk='".$_POST['th_masuk']."',
         status='".$_POST['status']."'
         WHERE nis='".$_POST['nis']."'";
