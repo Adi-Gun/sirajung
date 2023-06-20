@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Jun 2023 pada 06.18
+-- Waktu pembuatan: 20 Jun 2023 pada 09.58
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -60,12 +60,12 @@ CREATE TABLE `tb_kelas` (
 --
 
 INSERT INTO `tb_kelas` (`id_kelas`, `kelas`) VALUES
-(5, 'Kelas 1'),
-(6, 'Kelas 2'),
-(7, 'Kelas 3'),
-(8, 'Kelas 4'),
-(9, 'Kelas 5'),
-(10, 'Kelas 6');
+(5, '1'),
+(6, '2'),
+(7, '3'),
+(8, '4'),
+(9, '5'),
+(12, '6');
 
 -- --------------------------------------------------------
 
@@ -130,8 +130,36 @@ CREATE TABLE `tb_siswa` (
 --
 
 INSERT INTO `tb_siswa` (`nis`, `nama_siswa`, `jekel`, `id_kelas`, `id_angkatan`, `status`, `th_masuk`) VALUES
-('100', 'Adi Gunawan Ahmad', 'LK', 10, 2, 'Aktif', 2000),
-('126', 'Erwin Smith', 'LK', 7, 8, 'Aktif', 2003);
+('0002', 'Ahmad Nugroho Bangun Santoso', 'LK', 9, 1, 'Aktif', 2018),
+('0003', 'Alif Zia Ulhaq Muttaqien', 'LK', 9, 1, 'Aktif', 2018),
+('0004', 'Aulia Zahra Mila Tsaqifa', 'PR', 9, 1, 'Aktif', 2018),
+('0005', 'Aurelia Nanda Meisaroh', 'PR', 9, 1, 'Aktif', 2018),
+('0006', 'Binti Nur Rohmah Aprilia', 'PR', 9, 1, 'Aktif', 2018),
+('0007', 'Dahayu Lathifa Rabbani', 'PR', 9, 1, 'Aktif', 2018),
+('0008', 'Fairuz Zahwa Mumtazah Az-Zaady', 'PR', 9, 1, 'Aktif', 2018),
+('0009', 'Faiz Qolby Zoharo', 'LK', 9, 1, 'Aktif', 2018),
+('0010', 'Fathia Nanaya Argya', 'PR', 9, 1, 'Aktif', 2018),
+('0011', 'Fitrah Jauharul Ihfadzi', 'LK', 9, 1, 'Aktif', 2018),
+('0012', 'Ilma Satriani Isma', 'LK', 9, 1, 'Aktif', 2018),
+('0013', 'Ismah Sholihatul Abidah', 'PR', 9, 1, 'Aktif', 2018),
+('0014', 'Muhammad Aufa Nurhan Wardhana', 'LK', 9, 1, 'Aktif', 2018),
+('0015', 'Muhammad Azka Fadli Rahman', 'LK', 9, 1, 'Aktif', 2018),
+('0016', 'Muhammad Khoirul Romadhoni', 'LK', 9, 1, 'Aktif', 2018),
+('0017', 'Muhammad Novan Putra Ferdiansyah', 'LK', 9, 1, 'Aktif', 2018),
+('0018', 'Muhammad Syahrul Arifin', 'LK', 9, 1, 'Aktif', 2018),
+('0019', 'Nindy Amalia Nur Ahsani', 'PR', 9, 1, 'Aktif', 2018),
+('0020', 'Nurin Natasya Aulia', 'PR', 9, 1, 'Aktif', 2018),
+('0021', 'Siti Hamida Husna Sifatuillah', 'PR', 9, 1, 'Aktif', 2018),
+('0022', 'Soraya Nurul Azizah', 'PR', 9, 1, 'Aktif', 2018),
+('0036', 'Aulia Dinda Sekarsari', 'PR', 9, 1, 'Aktif', 2018),
+('0052', 'Irlya Az Zikra Permatasari', 'PR', 9, 1, 'Aktif', 2018),
+('0054', 'Rahmadani Koirul Fuad', 'LK', 9, 1, 'Aktif', 2018),
+('0055', 'Muhamad Zulfa', 'LK', 9, 1, 'Aktif', 2018),
+('0056', 'Fatimah Az Zahra', 'PR', 9, 1, 'Aktif', 2018),
+('0076', 'Fika Lestari Arfia Putri', 'PR', 9, 1, 'Aktif', 2018),
+('0078', 'Dewanta Yoga Prasetya', 'LK', 9, 1, 'Aktif', 2018),
+('0080', 'Khofifah Husna Mahrunnisa', 'PR', 9, 1, 'Aktif', 2018),
+('0084', 'Muhammad Gideon Adzkiya Hemadani', 'LK', 9, 1, 'Aktif', 2018);
 
 -- --------------------------------------------------------
 
@@ -148,6 +176,16 @@ CREATE TABLE `tb_tabungan` (
   `jenis` enum('ST','TR') NOT NULL,
   `petugas` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_tabungan`
+--
+
+INSERT INTO `tb_tabungan` (`id_tabungan`, `nis`, `setor`, `tarik`, `tgl`, `jenis`, `petugas`) VALUES
+(83, '0019', 1000, 0, '2023-06-19', 'ST', 'Eren Yeager'),
+(84, '0006', 2000, 0, '2023-06-19', 'ST', 'Eren Yeager'),
+(85, '0004', 500000, 0, '2023-06-20', 'ST', 'Adi Gunawan Ahmad'),
+(86, '0004', 0, 20000, '2023-06-20', 'TR', 'Adi Gunawan Ahmad');
 
 --
 -- Indexes for dumped tables
@@ -206,7 +244,7 @@ ALTER TABLE `tb_angkatan`
 -- AUTO_INCREMENT untuk tabel `tb_kelas`
 --
 ALTER TABLE `tb_kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_pengguna`
@@ -224,7 +262,7 @@ ALTER TABLE `tb_profil`
 -- AUTO_INCREMENT untuk tabel `tb_tabungan`
 --
 ALTER TABLE `tb_tabungan`
-  MODIFY `id_tabungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id_tabungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
