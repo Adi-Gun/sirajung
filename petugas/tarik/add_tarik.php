@@ -16,7 +16,7 @@ $tanggal = date("Y-m-d");
 		<li>
 			<a href="index.php">
 				<i class="fa fa-home"></i>
-				<b>SIRAJUNG/b>
+				<b>SIRAJUNG</b>
 			</a>
 		</li>
 	</ol>
